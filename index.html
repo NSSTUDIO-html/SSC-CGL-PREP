@@ -3,46 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SSC CGL Prep Index</title>
+
+<title>SSC CGL PREP Dashboard</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
+
 body{
-background:#0b1120;
+background:#020617;
+overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
 }
 
+/* Glow */
+.glow{
+box-shadow:0 0 25px rgba(34,211,238,.15);
+}
+
+/* Cards */
 .card{
-transition:.3s;
+transition:.35s;
+backdrop-filter:blur(10px);
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 35px rgba(255,255,255,.08);
 }
+
+/* Progress */
+.progress-bar{
+height:10px;
+border-radius:20px;
+overflow:hidden;
+background:#1e293b;
+}
+
+.progress-fill{
+height:100%;
+background:linear-gradient(to right,#06b6d4,#22c55e);
+width:65%;
+}
+
 </style>
 
 </head>
 <body class="text-white min-h-screen">
 
-<!-- Header -->
-<div class="max-w-6xl mx-auto p-8">
+<!-- MAIN -->
+<div class="max-w-7xl mx-auto p-6 md:p-10">
 
-<h1 class="text-5xl md:text-7xl font-bold text-center text-cyan-400 mb-4">
+<!-- HERO -->
+<div class="text-center mb-14">
+
+<h1 class="text-5xl md:text-7xl font-black text-cyan-400 mb-4 glow">
 SSC CGL PREP
 </h1>
 
-<p class="text-center text-gray-400 mb-12">
-Select a Subject
+<p class="text-gray-400 text-lg">
+2026 Tier 1 Preparation Dashboard
 </p>
 
+<div class="mt-8 flex justify-center gap-4 flex-wrap">
 
-<!-- Subject Cards -->
-<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-cyan-500/10 border border-cyan-400 px-6 py-3 rounded-2xl">
+📚 Daily Study
+</div>
+
+<div class="bg-green-500/10 border border-green-400 px-6 py-3 rounded-2xl">
+🎯 Mock Tests
+</div>
+
+<div class="bg-purple-500/10 border border-purple-400 px-6 py-3 rounded-2xl">
+🔥 Consistency
+</div>
+
+</div>
+
+</div>
 
 
-<!-- Quant -->
+
+<!-- SUBJECTS -->
+<h2 class="text-3xl font-bold mb-8 text-cyan-300">
+Subjects
+</h2>
+
+<div class="grid lg:grid-cols-2 gap-8 mb-16">
+
+
+<!-- QUANT -->
 <a href="SSCQUANT.html"
-class="card bg-amber-500/10 border border-amber-400 rounded-3xl p-8 shadow-lg">
+class="card bg-amber-500/10 border border-amber-400 rounded-3xl p-8 glow">
 
 <div class="text-6xl mb-5">
 ∑
@@ -56,17 +109,21 @@ Quantitative Aptitude
 Arithmetic, Algebra, Geometry, DI
 </p>
 
-<button class="bg-amber-500 text-black px-5 py-2 rounded-xl font-semibold">
-Open Syllabus
+<div class="progress-bar mb-4">
+<div class="progress-fill"></div>
+</div>
+
+<button class="bg-amber-500 text-black px-5 py-2 rounded-xl font-bold">
+Open Subject
 </button>
 
 </a>
 
 
 
-<!-- Reasoning -->
+<!-- REASONING -->
 <a href="SSCRE.html"
-class="card bg-cyan-500/10 border border-cyan-400 rounded-3xl p-8 shadow-lg">
+class="card bg-cyan-500/10 border border-cyan-400 rounded-3xl p-8 glow">
 
 <div class="text-6xl mb-5">
 ⬡
@@ -77,20 +134,24 @@ Reasoning
 </h2>
 
 <p class="text-gray-300 mb-6">
-Puzzles, Coding, Analogy, Series
+Puzzles, Analogy, Coding-Decoding
 </p>
 
-<button class="bg-cyan-500 text-black px-5 py-2 rounded-xl font-semibold">
-Open Syllabus
+<div class="progress-bar mb-4">
+<div class="progress-fill" style="width:50%"></div>
+</div>
+
+<button class="bg-cyan-500 text-black px-5 py-2 rounded-xl font-bold">
+Open Subject
 </button>
 
 </a>
 
 
 
-<!-- English -->
+<!-- ENGLISH -->
 <a href="SSCENG.html"
-class="card bg-purple-500/10 border border-purple-400 rounded-3xl p-8 shadow-lg">
+class="card bg-purple-500/10 border border-purple-400 rounded-3xl p-8 glow">
 
 <div class="text-6xl mb-5">
 Aa
@@ -101,11 +162,15 @@ English
 </h2>
 
 <p class="text-gray-300 mb-6">
-Grammar, Vocabulary, Comprehension
+Grammar, Vocabulary, Reading
 </p>
 
-<button class="bg-purple-500 text-black px-5 py-2 rounded-xl font-semibold">
-Open Syllabus
+<div class="progress-bar mb-4">
+<div class="progress-fill" style="width:40%"></div>
+</div>
+
+<button class="bg-purple-500 text-black px-5 py-2 rounded-xl font-bold">
+Open Subject
 </button>
 
 </a>
@@ -114,7 +179,7 @@ Open Syllabus
 
 <!-- GK -->
 <a href="SSCGK.html"
-class="card bg-green-500/10 border border-green-400 rounded-3xl p-8 shadow-lg">
+class="card bg-green-500/10 border border-green-400 rounded-3xl p-8 glow">
 
 <div class="text-6xl mb-5">
 🌍
@@ -128,19 +193,195 @@ General Awareness
 History, Polity, Science, Current Affairs
 </p>
 
-<button class="bg-green-500 text-black px-5 py-2 rounded-xl font-semibold">
-Open Syllabus
+<div class="progress-bar mb-4">
+<div class="progress-fill" style="width:30%"></div>
+</div>
+
+<button class="bg-green-500 text-black px-5 py-2 rounded-xl font-bold">
+Open Subject
 </button>
 
 </a>
 
+</div>
+
+
+
+<!-- NEW SECTIONS -->
+
+<!-- DAILY TARGETS -->
+<div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 mb-12 glow">
+
+<h2 class="text-3xl font-bold text-cyan-300 mb-6">
+📅 Daily Targets
+</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+<div class="bg-slate-800 p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-amber-300 mb-2">
+Quant
+</h3>
+<p class="text-gray-300">
+50 Questions Practice
+</p>
+</div>
+
+<div class="bg-slate-800 p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-cyan-300 mb-2">
+Reasoning
+</h3>
+<p class="text-gray-300">
+2 Puzzle Sets
+</p>
+</div>
+
+<div class="bg-slate-800 p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-purple-300 mb-2">
+English
+</h3>
+<p class="text-gray-300">
+20 Vocabulary Words
+</p>
+</div>
+
+<div class="bg-slate-800 p-5 rounded-2xl">
+<h3 class="text-xl font-bold text-green-300 mb-2">
+GK
+</h3>
+<p class="text-gray-300">
+Current Affairs Revision
+</p>
+</div>
+
+</div>
 
 </div>
 
 
-<!-- Footer -->
-<div class="text-center mt-14 text-gray-500">
-SSC CGL Dashboard v1.0
+
+<!-- MOCK TEST -->
+<div class="grid lg:grid-cols-2 gap-8 mb-12">
+
+
+<div class="bg-slate-900 border border-cyan-500 rounded-3xl p-8 glow">
+
+<h2 class="text-3xl font-bold text-cyan-300 mb-5">
+📝 Mock Tests
+</h2>
+
+<ul class="space-y-4 text-gray-300">
+
+<li>✔ Full Length Mock 1</li>
+<li>✔ Full Length Mock 2</li>
+<li>⏳ Mock Analysis Pending</li>
+<li>🎯 Target Score : 160+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="bg-slate-900 border border-green-500 rounded-3xl p-8 glow">
+
+<h2 class="text-3xl font-bold text-green-300 mb-5">
+🔥 Study Streak
+</h2>
+
+<div class="text-6xl font-black text-white mb-4">
+21 DAYS
+</div>
+
+<p class="text-gray-400">
+Consistency Builds Rank
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- RESOURCES -->
+<div class="bg-slate-900 border border-purple-500 rounded-3xl p-8 mb-12 glow">
+
+<h2 class="text-3xl font-bold text-purple-300 mb-8">
+📂 Resources
+</h2>
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<a href="#"
+class="bg-slate-800 p-6 rounded-2xl hover:bg-slate-700 transition">
+
+<h3 class="text-2xl font-bold mb-2">
+📘 PYQs
+</h3>
+
+<p class="text-gray-400">
+Previous Year Questions
+</p>
+
+</a>
+
+
+
+<a href="#"
+class="bg-slate-800 p-6 rounded-2xl hover:bg-slate-700 transition">
+
+<h3 class="text-2xl font-bold mb-2">
+📄 Notes
+</h3>
+
+<p class="text-gray-400">
+Formula Sheets & Short Notes
+</p>
+
+</a>
+
+
+
+<a href="#"
+class="bg-slate-800 p-6 rounded-2xl hover:bg-slate-700 transition">
+
+<h3 class="text-2xl font-bold mb-2">
+🎥 Lectures
+</h3>
+
+<p class="text-gray-400">
+Study Videos & Revision
+</p>
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- MOTIVATION -->
+<div class="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400 rounded-3xl p-10 text-center mb-10">
+
+<h2 class="text-4xl font-black mb-4">
+🚀 SSC CGL 2026
+</h2>
+
+<p class="text-xl text-gray-300">
+Discipline + Revision + Mock Tests = Success
+</p>
+
+</div>
+
+
+
+<!-- FOOTER -->
+<div class="text-center text-gray-500 pb-8">
+
+SSC CGL Dashboard v2.0 <br>
+Built By NS STUDIO
+
 </div>
 
 </div>
